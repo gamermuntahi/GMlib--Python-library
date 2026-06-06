@@ -1,0 +1,121 @@
+GMDB Python Tutorial
+
+GMDB is a minimal, encrypted key-value database for Python. It allows you to store structured data safely and export it when needed.
+
+1. Installation
+
+Copy gmdb.py into your project folder. No extra packages are required for the minimal version.
+
+2. Importing GMDB
+from GMlib.gmdb import GMDB
+
+
+⚠️ Note: Do not use import gmdb as GMDB. That will import the module, not the class.
+
+3. Creating or Opening a Database
+db = GMDB("database.gmdb", "your_password")
+
+
+"database.gmdb" – the filename for your database.
+
+"your_password" – password for encrypting/decrypting data.
+
+If the file does not exist, GMDB will create a new encrypted database.
+
+4. Creating a Storage
+
+Storages are like tables for storing related data.
+
+db.create_storage("users")
+
+
+"users" – storage name (you can have multiple storages like players, items, etc.).
+
+5. Adding or Updating Data
+# Add or update a user
+db.set("users", "10310", "name", "John")
+db.set("users", "10310", "age", 25)
+db.set("users", "10310", "email", "john@example.com")
+
+
+First parameter: storage name
+
+Second parameter: key/ID for this record
+
+Third parameter: field name
+
+Fourth parameter: value
+
+6. Reading Data
+user = db.get("users", "10310")
+print(user)
+
+
+Output:
+
+{'name': 'John', 'age': 25, 'email': 'john@example.com'}
+
+7. Exporting Data
+
+You can export the database to a readable JSON file:
+
+db.export("backup.json")
+
+
+"backup.json" – exported JSON filename.
+
+This is useful for backup or inspection without decrypting the .gmdb file manually.
+
+8. Closing the Database
+
+Always close the database after operations to ensure data is saved properly:
+
+db.close()
+
+9. Full Example
+from GMlib.gmdb import GMDB
+
+# Open or create encrypted DB
+db = GMDB("database.gmdb", "123")
+
+# Create storage
+db.create_storage("users")
+
+# Add some data
+db.set("users", "10310", "name", "John")
+db.set("users", "10310", "age", 25)
+db.set("users", "10310", "email", "john@example.com")
+
+# Read data
+print(db.get("users", "10310"))
+
+# Export to JSON
+db.export("backup.json")
+
+# Close DB
+db.close()
+
+
+Expected Output:
+
+{'name': 'John', 'age': 25, 'email': 'john@example.com'}
+
+10. Notes
+
+Password-protected: The database cannot be opened without the correct password.
+
+Encrypted: The .gmdb file is not readable without decryption.
+
+Minimal: No external dependencies; lightweight and fast.
+
+Backup: You can always export your data to JSON if you need a human-readable backup.
+
+
+
+
+
+
+Version: Custom DATABASE Module v1.0
+Creator: Muntahi
+System Type: Pure Python ANSI Styling
+-------------------------------------

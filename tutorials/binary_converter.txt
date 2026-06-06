@@ -1,0 +1,190 @@
+BinaryConverter – Universal Binary Conversion System (One-Page Guide)
+
+A complete binary conversion engine for your GMlib.
+
+BinaryConverter converts between integers and binary strings with full support for:
+
+Any bit length
+
+Large numbers
+
+Positive & negative integers
+
+Fast, safe conversion
+
+Pure Python (no external modules)
+
+Works perfectly in:
+
+VS Code
+
+Windows Terminal
+
+Linux/macOS
+
+Python scripts
+
+GMlib internal modules
+
+1. WHAT THIS MODULE DOES
+
+binary_converter.py provides two main functions:
+
+convert(value)
+
+Automatically detects what the user typed:
+
+Input Type	Meaning	Output
+"1011"	Binary string	11 (decimal)
+"29"	Decimal string	29
+1011 (int)	Decimal number	1011
+11	Decimal	11
+
+It intelligently decides:
+
+If input looks binary → convert to decimal
+
+If input is normal number → return decimal
+
+If input is integer → return integer
+
+to_binary(n)
+
+Converts any integer into a proper binary string:
+
+Input	Output
+5	"101"
+12	"1100"
+255	"11111111"
+0	"0"
+
+Supports negative numbers:
+
+to_binary(-5) → "-101"
+
+2. HOW IT WORKS INTERNALLY
+Binary → Decimal Conversion Algorithm
+
+Checks if all characters are 0 or 1
+
+Converts using Python base-2 logic:
+
+int(binary_string, 2)
+
+
+Returns clean decimal integer
+
+Decimal → Binary Conversion Algorithm
+
+For negative numbers, keeps track of sign
+
+Uses Python’s binary engine:
+
+bin(n)[2:]
+
+
+Removes the 0b prefix
+
+Returns clean binary string
+
+3. FUNCTIONS IN THE FILE
+
+Here is the exact file you received:
+
+def convert(value):
+    value = str(value).strip()
+
+    if all(c in "01" for c in value):
+        return int(value, 2)
+
+    return int(value)
+
+
+def to_binary(n):
+    n = int(n)
+
+    if n < 0:
+        return "-" + bin(n)[3:]  
+
+    return bin(n)[2:]
+
+4. HOW TO USE IT
+Convert input to number
+import GMlib.binary_converter as cn
+
+x = cn.convert("1011")  
+print(x)  
+# Output: 11
+
+Convert decimal to binary
+print(cn.to_binary(15))
+# Output: 1111
+
+Inside Logic Gate Calculator
+import GMlib.boolean_algebra_logic_gates as logic
+import GMlib.binary_converter as cn
+
+a = cn.convert("1010")
+b = cn.convert("0101")
+
+result = logic.binary_add(a, b)
+print(cn.to_binary(result))
+
+5. WHY THIS MODULE IS IMPORTANT
+
+BinaryConverter fixes:
+
+✔ Wrong input types
+✔ String inputs
+✔ Leading zeros
+✔ Mixing decimal + binary values
+✔ Conversion errors inside logic gate modules
+
+And makes your GMlib compatible across:
+
+logic gate systems
+
+calculators
+
+math modules
+
+AI projects
+
+hardware simulations
+
+6. BEST PRACTICE RULES
+
+Always pass user input through:
+
+cn.convert()
+
+
+When displaying binary output, always use:
+
+cn.to_binary()
+
+
+Avoid directly converting using int(input())
+
+Use this module whenever binary appears in your program
+
+FINAL SUMMARY
+
+binary_converter.py is your central binary processing engine.
+It converts any input safely into integers, and converts numbers back into binary cleanly.
+
+Perfect for:
+
+Logic gates
+
+Binary add/sub/mul/div
+
+CPU simulations
+
+Digital electronics projects
+
+Math modules
+
+AI scripts
+
+GMlib core utilities

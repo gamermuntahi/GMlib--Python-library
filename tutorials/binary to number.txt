@@ -1,0 +1,133 @@
+BinaryToNumber – Professional Binary-to-Decimal Conversion Guide (One-Page)
+
+BinaryToNumber is a Python module for converting binary strings into decimal numbers. It’s simple, lightweight, and works entirely in pure Python.
+
+This system works in:
+
+Windows Terminal
+
+VS Code Terminal
+
+Linux terminals
+
+macOS terminals
+
+It handles any length binary number and ensures input validation.
+
+1. MAIN FUNCTION
+
+binary_to_decimal(binary_str)
+
+Converts a binary string (like "1011") to its decimal equivalent.
+
+Only accepts 0 and 1 characters.
+
+Returns an integer.
+
+Usage Idea:
+Use this function in:
+
+Binary calculators
+
+Digital electronics simulations
+
+Learning and teaching binary arithmetic
+
+Converting user input for logic gate operations
+
+2. INPUT REQUIREMENTS
+
+Input must be a string.
+
+Only '0' and '1' are allowed.
+
+Any invalid input raises a ValueError.
+
+Example:
+
+binary_to_decimal("1010")  # Returns 10
+binary_to_decimal("111")   # Returns 7
+binary_to_decimal("2")     # Raises ValueError
+
+3. HOW IT WORKS
+
+The function iterates from the least significant bit (rightmost) to the most significant bit.
+
+Each bit is multiplied by 2 raised to its position index.
+
+All contributions are summed to give the decimal number.
+
+Algorithm Steps:
+
+Validate input.
+
+Initialize decimal = 0.
+
+Loop over each bit from right to left.
+
+Add bit * (2 ** position) to decimal.
+
+Return decimal.
+
+4. EXAMPLE USAGE
+from GMlib.binary_to_number import binary_to_decimal
+
+b = "1101"
+decimal_value = binary_to_decimal(b)
+print(f"Binary {b} = Decimal {decimal_value}")
+
+
+Output:
+
+Binary 1101 = Decimal 13
+
+5. PRACTICAL USE CASES
+
+Digital Electronics
+Convert outputs of binary circuits to decimal for display.
+
+Binary Calculators
+Build tools that can accept binary input and compute decimal results.
+
+Logic Gate Projects
+Use with modules like boolean_algebra_logic_gates for simulations.
+
+Learning & Teaching
+Perfect for students understanding binary to decimal conversion.
+
+6. MOST IMPORTANT RULE
+
+Always provide a binary string, not an integer.
+
+binary_to_decimal("1010")  # Correct
+binary_to_decimal(1010)    # Incorrect
+
+7. FILE STRUCTURE SUMMARY
+
+Your single file contains:
+
+binary_to_decimal function
+
+Input validation
+
+Built-in example usage
+
+8. FINAL SUMMARY
+
+BinaryToNumber provides a reliable, educational, and efficient way to convert binary numbers to decimal.
+
+Perfect for:
+
+Students
+
+Teachers
+
+Engineers
+
+Python developers
+
+Digital electronics hobbyists
+
+Version: BinaryToNumber v1.0
+Creator: Muntahi
+System Type: Pure Python Binary Conversion

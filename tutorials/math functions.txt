@@ -1,0 +1,225 @@
+Custom Python Math Module – Full One-Page Guide
+
+This module is a custom-built math utility library made without external libraries. It includes:
+
+* Prime checking
+* Square roots
+* Basic math
+* Advanced number properties
+* Ranges, lists, and statistics
+
+It is designed for learning, competitive programming, scripting, and game logic.
+
+---
+
+1. Prime Number System
+
+IS_PRIME_CORE(n)
+Checks if a number is a prime number. A prime number is divisible only by 1 and itself.
+Example:
+7 → Prime
+10 → Not Prime
+
+IS_PRIME(n)
+Same as IS_PRIME_CORE, but if no value is provided, it asks the user for input.
+Use Case: Interactive prime checker program.
+
+---
+
+2. Square Root System
+
+ROOT(n)
+Finds square root without floating-point math.
+If perfect square → integer root.
+If not → high-precision decimal root.
+
+Examples:
+ROOT(16) → 4
+ROOT(2) → 1.4142135623...
+
+Use Case:
+Scientific calculations, game physics, precision math.
+
+---
+
+3. Basic Arithmetic
+
+ADD(a, b) → Addition
+SUB(a, b) → Subtraction
+MUL(a, b) → Multiplication
+DIV(a, b) → Division with zero safety
+MOD(a, b) → Remainder
+POWER(a, b) → Exponent
+
+Examples:
+ADD(5, 3) → 8
+POWER(2, 5) → 32
+DIV(10, 0) → Undefined
+
+Use Case:
+Calculator apps, banking logic, scientific tools.
+
+---
+
+4. Factorial System
+
+FACT(n)
+Finds factorial of a number.
+5! = 5 × 4 × 3 × 2 × 1 = 120
+
+Example:
+FACT(5) → 120
+
+Use Case:
+Permutations, combinations, statistics.
+
+---
+
+5. Even & Odd Detection
+
+IS_EVEN(n) → Checks if number is even
+IS_ODD(n) → Checks if number is odd
+
+Examples:
+IS_EVEN(10) → True
+IS_ODD(7) → True
+
+Use Case:
+Game turns, number filtering, logic systems.
+
+---
+
+6. GCD & LCM
+
+GCD(a, b)
+Finds Greatest Common Divisor.
+
+LCM(a, b)
+Finds Least Common Multiple.
+
+Examples:
+GCD(24, 36) → 12
+LCM(6, 8) → 24
+
+Use Case:
+Fractions, time cycle systems, algorithm problems.
+
+---
+
+7. Fibonacci Generator
+
+FIB(n)
+Finds the nth Fibonacci number.
+
+Series:
+0, 1, 1, 2, 3, 5, 8, 13...
+
+Example:
+FIB(7) → 13
+
+Use Case:
+Algorithms, pattern generation, game progression logic.
+
+---
+
+8. Digit Analysis Tools
+
+DIGIT_SUM(n) → Sum of digits
+DIGIT_COUNT(n) → Total digits
+REVERSE_NUM(n) → Reverse number
+
+Examples:
+DIGIT_SUM(1234) → 10
+DIGIT_COUNT(98765) → 5
+REVERSE_NUM(123) → 321
+
+Use Case:
+Data validation, security algorithms, puzzle games.
+
+---
+
+9. Number Property Detection
+
+IS_PERFECT_SQUARE(n) → Detects square numbers
+IS_ARMSTRONG(n) → Detects Armstrong numbers
+IS_PALINDROME(n) → Detects palindrome numbers
+
+Examples:
+IS_PERFECT_SQUARE(16) → True
+IS_ARMSTRONG(153) → True
+IS_PALINDROME(121) → True
+
+Use Case:
+Competitive programming, pattern recognition, digital logic.
+
+---
+
+10. Range-Based Generators
+
+PRIME_RANGE(a, b)
+Returns all prime numbers between two values.
+
+Example:
+PRIME_RANGE(10, 30) → 11, 13, 17, 19, 23, 29
+
+FACT_RANGE(n)
+Returns factorial values from 1 to n.
+
+Example:
+FACT_RANGE(5) → 1, 2, 6, 24, 120
+
+Use Case:
+Data generation, math tables, visualization.
+
+---
+
+11. Maximum & Minimum Tools
+
+MAX2(a, b) → Larger of two
+MIN2(a, b) → Smaller of two
+MAX3(a, b, c) → Largest of three
+MIN3(a, b, c) → Smallest of three
+
+Examples:
+MAX2(10, 25) → 25
+MIN3(5, 9, 3) → 3
+
+Use Case:
+AI decision making, game score logic, sorting systems.
+
+---
+
+12. Percentage & Average
+
+PERCENT(total, part)
+Finds percentage value.
+
+Example:
+PERCENT(200, 50) → 25
+
+AVERAGE(list)
+Finds mean average.
+
+Example:
+AVERAGE(10, 20, 30) → 20
+
+Use Case:
+Student result systems, data analysis, AI scoring.
+
+---
+
+Final Summary
+
+This math module is powerful enough for:
+
+* Games
+* AI logic
+* Competitive programming
+* School and college projects
+* Encryption systems
+* Scientific tools
+
+---
+
+Version: Custom Math Module v1.0
+Creator: Muntahi

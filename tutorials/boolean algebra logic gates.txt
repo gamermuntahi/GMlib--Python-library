@@ -1,0 +1,146 @@
+BooleanAlgebra – Professional Binary Logic & Arithmetic Guide (One-Page)
+
+BooleanAlgebra is a complete Python module for binary logic gates and binary arithmetic. It allows you to perform bitwise operations, create logic circuits, and compute binary addition, subtraction, multiplication, and division — all using 0 and 1 with logic gates.
+
+This system works in:
+
+Windows Terminal
+
+VS Code Terminal
+
+Linux terminals
+
+macOS terminals
+
+It is fully Python-based, so no external libraries are needed.
+
+1. LOGIC GATES (Fundamental Operations)
+
+AND(a, b)
+Returns logical AND of two bits (0 or 1).
+
+OR(a, b)
+Returns logical OR of two bits.
+
+NOT(a)
+Returns logical NOT of a bit.
+
+NAND(a, b)
+Returns logical NAND of two bits.
+
+NOR(a, b)
+Returns logical NOR of two bits.
+
+XOR(a, b)
+Returns logical XOR of two bits.
+
+XNOR(a, b)
+Returns logical XNOR of two bits.
+
+Usage Idea:
+Use these functions to simulate digital circuits or build more complex operations.
+
+2. BINARY ADDITION
+
+full_adder_bit(a, b, carry)
+Adds two bits and a carry bit. Returns (sum, carry_out).
+
+binary_add(a, b)
+Adds two binary numbers (strings like "101" and "11") of any length.
+
+Example:
+
+binary_add("101", "11")  # Returns "1000"
+
+3. BINARY SUBTRACTION
+
+binary_subtract(a, b)
+Subtracts b from a using two’s complement. Inputs are binary strings.
+
+Example:
+
+binary_subtract("101", "11")  # Returns "10"
+
+4. BINARY MULTIPLICATION
+
+binary_multiply(a, b)
+Multiplies two binary numbers using repeated addition logic.
+
+Example:
+
+binary_multiply("101", "11")  # Returns "1111"
+
+5. BINARY DIVISION
+
+binary_divide(dividend, divisor)
+Performs binary division. Returns (quotient, remainder) as strings.
+
+Example:
+
+binary_divide("1101", "11")  # Returns ("10", "1")
+
+6. FEATURES
+
+Works with arbitrary-length binary numbers.
+
+Uses logic gates internally, simulating digital circuits.
+
+Safe division by zero check.
+
+Can be used for educational purposes, simulation, or binary computation projects.
+
+7. PRACTICAL USE CASES
+
+Digital Circuit Simulation
+Build and test circuits entirely in Python.
+
+Binary Calculator Projects
+Create calculators that work like hardware adders and ALUs.
+
+Student Assignments
+Show how binary addition, subtraction, multiplication, and division works with gates.
+
+Game Development
+Implement binary puzzles or hacking simulations.
+
+8. MOST IMPORTANT RULE
+
+Always use 0 or 1 as input bits. Using other values will break logic gate calculations.
+
+9. FILE STRUCTURE SUMMARY
+
+Your single file contains:
+
+All logic gate functions (AND, OR, NOT, NAND, NOR, XOR, XNOR)
+
+Full-adder bit function
+
+Binary addition function
+
+Binary subtraction function
+
+Binary multiplication function
+
+Binary division function
+
+Built-in example usage
+
+10. FINAL SUMMARY
+
+BooleanAlgebra turns Python into a digital logic and binary computation engine. Perfect for:
+
+Students
+
+Teachers
+
+Engineers
+
+Game developers
+
+Hacker simulation projects
+
+Digital electronics experiments
+
+Version: BooleanAlgebra v1.0
+Creator: Muntahi
+System Type: Pure Python Binary Logic & Arithmetic
